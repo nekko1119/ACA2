@@ -1,6 +1,6 @@
 ﻿#include "stdafx.h"
 #include "CppUnitTest.h"
-#include <aca2/rgb.h>
+#include <aca2/rgb.hpp>
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 

@@ -51,7 +51,12 @@ namespace aca2
             return blue_;
         }
     };
-
+    
+    /// <summary>
+    /// <see cref="rgb">rgb</see>を符号なし整数値に変換する
+    /// </summary>
+    /// <param name="rgb">rgbインスタンス</param>
+    /// <returns>rgbの符号なし整数値</returns>
     inline std::uint32_t to_uint(rgb const& rgb) noexcept
     {
         return (rgb.red() << 16) | (rgb.green() << 8) | rgb.blue();
