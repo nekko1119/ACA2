@@ -1,13 +1,13 @@
-// stdafx.h : �W���̃V�X�e�� �C���N���[�h �t�@�C���̃C���N���[�h �t�@�C���A�܂���
-// �Q�Ɖ񐔂������A�����܂�ύX����Ȃ��A�v���W�F�N�g�ŗL�̃C���N���[�h �t�@�C��
-// ���L�q���܂��B
+﻿// stdafx.h : 標準のシステム インクルード ファイルのインクルード ファイル、または
+// 参照回数が多く、かつあまり変更されない、プロジェクト固有のインクルード ファイル
+// を記述します。
 //
 
 #pragma once
 
 #include "targetver.h"
 
-// CppUnitTest �̃w�b�_�[
+// CppUnitTest のヘッダー
 #include "CppUnitTest.h"
 
-// TODO: �v���O�����ɕK�v�Ȓǉ��w�b�_�[�������ŎQ�Ƃ��Ă��������B
+// TODO: プログラムに必要な追加ヘッダーをここで参照してください。
