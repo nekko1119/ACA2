@@ -12,7 +12,6 @@ namespace aca2
         std::uint8_t blue_;
 
     public:
-        
         /// <summary>
         /// コンストラクタ
         /// </summary>
@@ -24,28 +23,16 @@ namespace aca2
         {
         }
 
-        /// <summary>
-        /// 赤の値を返す
-        /// </summary>
-        /// <returns>赤の値</returns>
         std::uint8_t red() const noexcept
         {
             return red_;
         }
-        
-        /// <summary>
-        /// 緑の値を返す
-        /// </summary>
-        /// <returns>緑の値</returns>
+
         std::uint8_t green() const noexcept
         {
             return green_;
         }
-        
-        /// <summary>
-        /// 青の値を返す
-        /// </summary>
-        /// <returns>青の値</returns>
+
         std::uint8_t blue() const noexcept
         {
             return blue_;
