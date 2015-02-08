@@ -38,6 +38,16 @@ namespace aca2
             return blue_;
         }
     };
+
+    inline bool operator==(rgb const& l, rgb const& r) noexcept
+    {
+        return l.red() == r.red() && l.green() == r.green() && l.blue() == r.blue();
+    }
+
+    inline bool operator!=(rgb const& l, rgb const& r) noexcept
+    {
+        return !(l == r);
+    }
     
     /// <summary>
     /// <see cref="rgb">rgb</see>を符号なし整数値に変換する
