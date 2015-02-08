@@ -3,6 +3,7 @@
 #include <aca2/rgb.hpp>
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+
 namespace Microsoft
 {
     namespace VisualStudio
