@@ -1,14 +1,16 @@
 ﻿#include "texture.hpp"
+#include <aca2/utility/precondition.hpp>
 #include <stdexcept>
+#include <boost/filesystem.hpp>
 #include <DxLib.h>
 
 namespace aca2
 {
     texture::texture(std::string const& filename)
     {
-        if (DxLib_IsInit() == FALSE) {
-            throw std::logic_error{"dxlib is not initialized"};
-        }
+        boost::filesystem::path const path{filename};
+        precondition::validate_argument(boost::filesystem::exists(path), "file is not found");
+        precondition::validate_state(DxLib_IsInit() == FALSE, "dxlib is not initialized");
         handle_ = LoadGraph(filename.c_str());
         if (handle_ == -1) {
             throw std::runtime_error{"failed to load a file"};
