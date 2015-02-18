@@ -29,7 +29,7 @@ namespace aca2
     TEST_CLASS(rgb_test)
     {
     public:
-        TEST_METHOD(正しくインスタンス化できる)
+        TEST_METHOD(インスタンス化後有効な状態になっている)
         {
             rgb const& rgb{64U, 128U, 255U};
             Assert::AreEqual<std::uint8_t>(64U, rgb.red(), L"赤は64");
@@ -42,6 +42,16 @@ namespace aca2
             rgb const rgb{255, 0, 128};
             auto const num = to_uint(rgb);
             Assert::AreEqual(0xFF0080U, num, L"(255, 0, 128)は整数値で0xFF0080になる");
+        }
+
+        TEST_METHOD(等価演算できる)
+        {
+            rgb const rgb1{1, 2, 3};
+            rgb const rgb2{1, 2, 3};
+            rgb const rgb3{1, 2, 4};
+            Assert::AreNotSame(rgb1, rgb2, L"rgb1とrgb2は異なるインスタンス");
+            Assert::AreEqual(rgb1, rgb2, L"rgb1とrgb2は等価");
+            Assert::AreNotEqual(rgb1, rgb3, L"rgb1とrgb3は不等価");
         }
     };
 }

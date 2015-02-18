@@ -64,13 +64,13 @@ namespace aca2
             Assert::AreEqual(expected, actual, L"(1, 2) + 2は(3, 4)");
         }
 
-        TEST_METHOD(point同士で等値演算できる)
+        TEST_METHOD(point同士で等価演算できる)
         {
             point const p1{1, 2};
             point const p2{1, 2};
             point const p3{1, 3};
-            Assert::AreEqual(p1, p2, L"p1とp2は等しい");
-            Assert::AreNotEqual(p1, p3, L"p1とp3は等しくない");
+            Assert::AreEqual(p1, p2, L"p1とp2は等価");
+            Assert::AreNotEqual(p1, p3, L"p1とp3は不等価");
         }
     };
 }
